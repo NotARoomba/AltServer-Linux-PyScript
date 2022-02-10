@@ -46,7 +46,7 @@ OPTIONS
   u, --Update
     Update this script or AltServer
 
-For more information: https://github.com/powenn/AltServer-Linux-ShellScript
+For more information: https://github.com/powenn/AltServer-Linux-PyScript
 """
 
 # AltServer icon
@@ -102,5 +102,7 @@ while RunScript==0 :
         AltServerIcon()
         print(HELP)
         UpdateNotification()
+    if option == 'u' : # Update
+        subprocess.run("curl -Lsk 'https://github.com/powenn/AltServer-Linux-PyScript/raw/main/update.py' | python3",shell=True)
 
 
