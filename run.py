@@ -10,9 +10,9 @@ os.chdir(DIRPATH)
 
 print("Checking source")
 if not os.path.exists('AltStore.ipa'):
-    subprocess.run("https://github.com/powenn/AltServer-Linux-PyScript/raw/main/AltStore.ipa",shell=True)
-if not os.path.exists('main'):
-    subprocess.run("https://github.com/powenn/AltServer-Linux-PyScript/raw/main/main.py",shell=True)
+    subprocess.run("wget https://github.com/powenn/AltServer-Linux-PyScript/raw/main/AltStore.ipa",shell=True)
+if not os.path.exists('main.py'):
+    subprocess.run("wget https://github.com/powenn/AltServer-Linux-PyScript/raw/main/main.py",shell=True)
 if not os.path.exists('ipa'):
     subprocess.run("mkdir ipa",shell=True)
 if not os.path.exists('saved.txt'):
